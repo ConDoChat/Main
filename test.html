@@ -12,11 +12,9 @@ function httpGet(theUrl)
     return xmlHttp.responseText;
 }
 
-document.getElementById("content").innerHTML = httpGet("http://127.0.0.1/test");
+console.log(httpGet("http://127.0.0.1/test"));
 </script>
 </head>
 <body>
-<div id="content">
-</div>
 </body>
 </html>
