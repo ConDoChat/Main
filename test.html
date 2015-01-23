@@ -2,10 +2,21 @@
 <html>
 <head>
 <script>
-console.log("test");
+function httpGet(theUrl)
+{
+    var xmlHttp = null;
+
+    xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false );
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+}
+
+document.getElementById("content").innerHTML = httpGet("http://127.0.0.1/test");
 </script>
 </head>
 <body>
-test pagina!
+<div id="content">
+</div>
 </body>
 </html>
